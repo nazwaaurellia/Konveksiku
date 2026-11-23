@@ -7,7 +7,7 @@
 
 | Nama | NIM |
 |------|-----|
-| Nazwa Aurellia | (isi NIM) |
+| Nazwa Aurellia Aurellia Ababiluna Putri | 24051214226 |
 
 ## Jenis Aplikasi
 
