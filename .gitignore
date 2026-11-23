@@ -1,0 +1,28 @@
+# Env & secrets
+.env
+*.env
+!.env.example
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Flutter / Dart
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+.vscode/
+android/local.properties
+android/key.properties
+*.jks
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads
+backend/uploads/
