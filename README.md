@@ -3,19 +3,15 @@
 > Aplikasi layanan konveksi jahit & bordir berbasis mobile.
 > Tugas UTS — Pemrograman Aplikasi Bergerak, Program Studi Sistem Informasi, TA 2026/2027.
 
-## Anggota Kelompok
+## Identitas Mahasiswa
 
-| No | Nama | NIM | Peran |
-|----|------|-----|-------|
-| 1  | (isi nama) | (isi NIM) | (mis. Flutter UI) |
-| 2  | (isi nama) | (isi NIM) | (mis. Backend API) |
-| 3  | (isi nama) | (isi NIM) | (mis. Database & Testing) |
+| Nama | NIM |
+|------|-----|
+| Nazwa Aurellia | (isi NIM) |
 
-## Aplikasi Asli & Nama Plesetan
+## Jenis Aplikasi
 
-| Aplikasi Asli | Nama Plesetan |
-|---------------|---------------|
-| (isi aplikasi asli) | **KonveksiKu** |
+Aplikasi **orisinal** bernama **KonveksiKu** (bukan plesetan dari aplikasi lain).
 
 ## Deskripsi
 
@@ -35,7 +31,7 @@ KonveksiKu memudahkan pelanggan memesan dan memantau pesanan produk konveksi dal
 |-------|-----------|
 | Frontend | Flutter (Dart) |
 | Backend | REST API — Node.js + Express |
-| Database | PostgreSQL |
+| Database | MySQL (via Laragon) |
 
 ## Struktur Repositori
 
@@ -49,18 +45,19 @@ konveksiku/
 
 ## Panduan Menjalankan
 
-### 1. Database
+### 1. Database (MySQL)
+Jalankan MySQL dari Laragon (Start All), lalu:
 ```bash
-createdb konveksiku
-psql -d konveksiku -f database/migrations/001_init.sql
+mysql -u root -e "CREATE DATABASE konveksiku CHARACTER SET utf8mb4"
+mysql -u root konveksiku < database/migrations/001_init.sql
 ```
 
 ### 2. Backend
 ```bash
 cd backend
-cp .env.example .env     # sesuaikan konfigurasi DB
+copy .env.example .env     # sesuaikan konfigurasi DB
 npm install
-npm run dev              # berjalan di http://localhost:3000
+npm run dev                # berjalan di http://localhost:3000
 ```
 
 ### 3. Mobile (Flutter)
@@ -70,9 +67,6 @@ flutter pub get
 flutter run
 ```
 > Emulator Android mengakses backend lewat `http://10.0.2.2:3000`.
-
-## Pembagian Tugas
-Lihat tabel anggota di atas dan riwayat commit/PR.
 
 ## Video Demo
 (tautan YouTube diisi setelah video diunggah)
